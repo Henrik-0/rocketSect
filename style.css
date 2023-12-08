@@ -1,0 +1,180 @@
+:root {
+  --jet: 'JetBrains Mono', monospace;
+  --open: 'Open Sans', sans-serif;
+  --blue: #2F2E41;
+  --gray: #C2C2C2;
+  --green: #00BFA6; 
+
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  
+  background-color: var(--blue);
+
+  font-family: var(--open);
+  color: white;
+}
+
+#page {
+  width: 100%;
+  max-width: 1100px;
+  height: 100%;
+
+  margin: auto;
+  padding: 70px 20px 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#page nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+#page nav ul {
+  display: flex;
+  align-items: center;
+  gap: 65px;
+  
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  transition: .2s;
+}
+
+a:hover {
+  color: var(--green);
+}
+
+#page nav ul li{
+  font-size: 1.4rem;
+  font-family: var(--jet);
+  color: white;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 70px;
+}
+
+h1{
+  font-family: var(--jet);
+  font-size: 3.6rem;
+  font-weight: bold;
+
+  color: white;
+}
+
+span {
+  color: var(--green);
+  font-weight: bold;
+}
+
+main section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  text-align: center;
+  
+  font-size: 1.6rem;
+  color: var(--gray);
+
+  height: 300px;
+}
+
+#line {
+  border: 1px solid var(--green);
+  width: 700px;
+  margin: 0 auto 30px;
+}
+
+footer {
+  margin: 0 auto;
+  font-size: 1.4rem;
+
+  text-align: center;
+}
+
+footer a {
+  font-weight: bold;
+}
+
+#padLock {
+  bottom: 20px;
+  left: 20px;
+  position: fixed;
+}
+
+@media (max-width: 860px) {
+  main {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  #line {
+    width: 100%;
+  }
+}
+
+@media (max-width: 620px) {
+  #page nav ul{
+    gap: 20px;
+  }
+
+  main img {
+    width: 350px;
+  }
+
+  main section {
+    height: 250px;
+  }
+
+  footer {
+    width: 60%;
+  }
+
+  #line {
+    margin-bottom: 10px;
+  }
+} 
+
+@media (max-width: 455px) {
+  :root {
+    font-size: 50%;
+  }
+
+  #page nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #page nav #logo {
+    width: 130px;
+  }
+
+  main img {
+    width: 250px;
+  }
+}
